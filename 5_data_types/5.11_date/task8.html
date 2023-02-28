@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Форматирование относительной даты</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			alert(formatDate(new Date(new Date() - 1)));
+
+			alert(formatDate(new Date(new Date() - 30 * 1000)));
+
+			alert(formatDate(new Date(new Date() - 5 * 60 * 1000)));
+
+			alert(formatDate(new Date(new Date() - 86400 * 1000)));
+
+			function formatDate(date) {
+				const difference = new Date() - date;
+
+				if (difference < 1000) {
+					return 'прямо сейчас';
+				}
+
+				const seconds = Math.floor(difference / 1000);
+
+				if (seconds < 60) {
+					return seconds + ' сек. назад';
+				}
+
+				const minutes = Math.floor(difference / 60000);
+				if (minutes < 60) {
+					return minutes + ' минут назад';
+				}
+
+				const fullDate = [
+					'0' + date.getDate(),
+					'0' + (date.getMonth() + 1),
+					'' + date.getFullYear(),
+					'0' + date.getHours(),
+					'0' + date.getMinutes(),
+				].map((component) => component.slice(-2));
+
+				return (
+					fullDate.slice(0, 3).join('.') + ' ' + fullDate.slice(3).join(':')
+				);
+			}
+		</script>
+	</body>
+</html>

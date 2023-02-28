@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Сколько секунд осталось до завтра?</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			alert(getSecondsToTomorrow());
+			function getSecondsToTomorrow() {
+				const today = new Date();
+
+				const tomorrow = new Date(
+					today.getFullYear(),
+					today.getMonth(),
+					today.getDate() + 1
+				);
+
+				const seconds = tomorrow - today;
+				return Math.round(seconds / 1000);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Повторять цикл, пока ввод неверен</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			let inputNumber;
+			do {
+				inputNumber = +prompt('Введите число больше 100', 0);
+			} while (inputNumber !== null && inputNumber <= 100);
+		</script>
+	</body>
+</html>

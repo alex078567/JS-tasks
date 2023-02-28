@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Какой день месяца был много дней назад?</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			const date = new Date();
+			alert(getDateBefore(date, 1));
+			alert(getDateBefore(date, 2));
+			alert(getDateBefore(date, 365));
+
+			function getDateBefore(date, days) {
+				let dateCopy = new Date(date);
+				dateCopy.setDate(date.getDate() - days);
+				return dateCopy.getDate();
+			}
+		</script>
+	</body>
+</html>

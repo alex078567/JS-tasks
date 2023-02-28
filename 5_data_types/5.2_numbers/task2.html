@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Почему 6.35.toFixed(1) == 6.3?</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			alert((6.35).toFixed(1));
+
+			/**
+			 * рассмотрим как представлено число 6.35
+			 */
+			alert((6.35).toFixed(20));
+
+			/**
+			 * результат : 6.34999999999999964473
+			 * число округляется в меньшую сторону
+			 *
+			 * Исправленный вариант :
+			 */
+			alert((6.35 * 10).toFixed(0) / 10);
+		</script>
+	</body>
+</html>

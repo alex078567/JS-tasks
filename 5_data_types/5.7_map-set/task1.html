@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Фильтрация уникальных элементов массива</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			function unique(arr) {
+				return [...new Set(arr)];
+			}
+
+			let values = [
+				'Hare',
+				'Krishna',
+				'Hare',
+				'Krishna',
+				'Krishna',
+				'Krishna',
+				'Hare',
+				'Hare',
+				':-O',
+			];
+
+			alert(unique(values));
+		</script>
+	</body>
+</html>

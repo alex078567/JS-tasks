@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Перебираемые ключи</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let map = new Map();
+
+			map.set('name', 'John');
+
+			const keys = map.keys();
+
+			// keys это итерируемый объект и у него нет метода push
+			// конвертируем его в массив
+			const keysArr = [...keys];
+			keysArr.push('more');
+
+			// теперь все работает
+			alert(keysArr);
+		</script>
+	</body>
+</html>

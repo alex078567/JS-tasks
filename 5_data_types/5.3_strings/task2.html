@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Проверка на спам</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			alert(checkForSpam('buy ViAgRA now'));
+			alert(checkForSpam('free xxxxx'));
+			alert(checkForSpam('innocent rabbit'));
+
+			function checkForSpam(str) {
+				const lowerString = str.toLowerCase();
+				const result =
+					lowerString.includes('viagra') || lowerString.includes('xxx');
+				return result;
+			}
+		</script>
+	</body>
+</html>

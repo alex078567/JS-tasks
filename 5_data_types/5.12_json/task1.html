@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Преобразуйте объект в JSON, а затем обратно в обычный объект</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			const user = {
+				name: 'Василий Иванович',
+				age: 35,
+			};
+
+			const userToJson = JSON.stringify(user);
+			console.log(userToJson);
+			const userFromJson = JSON.parse(userToJson);
+			console.log(userFromJson);
+		</script>
+	</body>
+</html>

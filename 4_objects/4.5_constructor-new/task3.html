@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Создайте new Accumulator</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			function Accumulator(initialValue) {
+				this.value = initialValue;
+				this.read = function () {
+					this.value += +prompt('введите число', '');
+				};
+			}
+
+			let accumulator = new Accumulator(1);
+			accumulator.read();
+			accumulator.read();
+			alert(accumulator.value);
+		</script>
+	</body>
+</html>

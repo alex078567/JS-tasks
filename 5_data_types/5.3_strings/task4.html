@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Выделить число</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			alert(extractCurrencyValue('$120.99'));
+			function extractCurrencyValue(str) {
+				return parseFloat(str.slice(1));
+			}
+		</script>
+	</body>
+</html>

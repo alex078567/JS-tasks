@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Скопировать и отсортировать массив</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			let arr = ['HTML', 'JavaScript', 'CSS'];
+			function copyAndSortArray(arr) {
+				return arr.slice().sort();
+			}
+			let sortedArr = copyAndSortArray(arr);
+			alert(arr);
+			alert(sortedArr);
+		</script>
+	</body>
+</html>

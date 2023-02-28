@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Перепишите функцию, используя оператор '?' или '||'</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			// исходная функция
+
+			function checkAge(age) {
+				if (age > 18) {
+					return true;
+				} else {
+					return confirm('Родители разрешили?');
+				}
+			}
+
+			// та же функция, написанная с использованием оператора "?"
+
+			function checkAge(age) {
+				return age > 18 ? true : confirm('Родители разрешили?');
+			}
+
+			// та же функция, написанная с использованием оператора "||"
+
+			function checkAge(age) {
+				return age > 18 || confirm('Родители разрешили?');
+			}
+		</script>
+	</body>
+</html>

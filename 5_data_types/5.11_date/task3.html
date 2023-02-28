@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>День недели в европейской нумерации</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			const date = new Date(2012, 0, 3);
+			alert(getDayEur(date));
+
+			function getDayEur(date) {
+				const day = date.getDay();
+
+				if (day === 0) {
+					day = 7;
+				}
+
+				return day;
+			}
+		</script>
+	</body>
+</html>

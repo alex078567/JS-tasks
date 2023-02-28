@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Цепь вызовов</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let ladder = {
+				step: 0,
+				up() {
+					this.step++;
+					return this;
+				},
+				down() {
+					this.step--;
+					return this;
+				},
+				showStep: function () {
+					// показывает текущую ступеньку
+					alert(this.step);
+					return this;
+				},
+			};
+			/**
+			 * В каждом вызове необходимо возвращать объект.
+			 */
+
+			ladder.up().up().down().showStep().down().showStep();
+		</script>
+	</body>
+</html>

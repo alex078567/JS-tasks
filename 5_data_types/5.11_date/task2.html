@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Покажите день недели</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			const date = new Date(2014, 0, 3);
+			alert(getWeekDay(date));
+
+			function getWeekDay(date) {
+				const daysOfTheWeek = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+				const dayNumber = date.getDay();
+				return daysOfTheWeek[dayNumber];
+			}
+		</script>
+	</body>
+</html>

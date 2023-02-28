@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Сумма введённых чисел</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			function sumOfInput() {
+				let numArr = [];
+				while (true) {
+					const inputValue = prompt('Введите число', '');
+					if (
+						inputValue === '' ||
+						inputValue === null ||
+						!isFinite(inputValue)
+					) {
+						break;
+					}
+					numArr.push(+inputValue);
+				}
+				return numArr.reduce((acc, number) => acc + number, 0);
+			}
+
+			alert(sumOfInput());
+		</script>
+	</body>
+</html>

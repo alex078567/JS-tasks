@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Две функции - один объект</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			/**
+			 * Возможно ли создать функции A и B, чтобы new A() == new B()?
+			 *
+			 * Если обе функции будут возвращать один и тот же
+			 * объект, то возможно
+			 *
+			 */
+
+			let object = {};
+
+			function A() {
+				return object;
+			}
+			function B() {
+				return object;
+			}
+
+			alert(`new A() == new B()? :  ${new A() == new B()}`); // true
+		</script>
+	</body>
+</html>

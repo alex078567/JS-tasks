@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Создать расширяемый калькулятор</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			const calculator = new advancedCalc();
+			calculator.addMethod('*', (a, b) => a * b);
+			calculator.addMethod('/', (a, b) => a / b);
+			calculator.addMethod('**', (a, b) => a ** b);
+
+			alert(calculator.calculate('2 ** 3'));
+			alert(calculator.calculate('4 / 2'));
+			alert(calculator.calculate('2 * 5'));
+			alert(calculator.calculate('2 + 3'));
+
+			function advancedCalc() {
+				this.methods = {
+					'+': (a, b) => a + b,
+					'-': (a, b) => a - b,
+				};
+				this.calculate = function (str) {
+					const calcDataArr = str.split(' ');
+					const a = +calcDataArr[0];
+					const action = calcDataArr[1];
+					const b = +calcDataArr[2];
+					if (!this.methods[action] || !isFinite(a) || !isFinite(b)) {
+						return NaN;
+					}
+
+					return this.methods[action](a, b);
+				};
+				this.addMethod = function (name, funcBody) {
+					this.methods[name] = funcBody;
+				};
+			}
+		</script>
+	</body>
+</html>

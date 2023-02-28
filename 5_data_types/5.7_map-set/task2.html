@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Отфильтруйте анаграммы</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let arr = [
+				'nap',
+				'teachers',
+				'cheaters',
+				'PAN',
+				'ear',
+				'era',
+				'hectares',
+			];
+
+			function aclean() {
+				let mapUnique = new Map();
+				for (const word of arr) {
+					const sorted = word.toLowerCase().split('').sort().join('');
+					mapUnique.set(sorted, word);
+				}
+				return [...mapUnique.values()];
+			}
+
+			alert(aclean(arr));
+		</script>
+	</body>
+</html>

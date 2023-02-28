@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Хранение отметок "не прочитано"</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let messages = [
+				{ text: 'Hello', from: 'John' },
+				{ text: 'How goes?', from: 'John' },
+				{ text: 'See you soon', from: 'Alice' },
+			];
+
+			// используем WeakSet
+			const readMessages = new WeakSet();
+			// сообщение прочитано
+			readMessages.add(messages[2]);
+			console.log(readMessages);
+			//сообщение удалено
+			messages.pop();
+			setTimeout(() => {
+				console.log(readMessages);
+			}, 5000);
+		</script>
+	</body>
+</html>

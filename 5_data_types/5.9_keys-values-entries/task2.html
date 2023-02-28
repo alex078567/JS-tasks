@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Подсчёт количества свойств объекта</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let user = {
+				name: 'John',
+				age: 30,
+			};
+
+			alert(count(user)); // 2
+
+			function count(object) {
+				return Object.keys(object).length;
+			}
+		</script>
+	</body>
+</html>

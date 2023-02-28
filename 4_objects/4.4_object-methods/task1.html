@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Использование "this" в литерале объекта</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			/**
+			 * Здесь функция makeUser возвращает объект.
+			 * Каким будет результат при обращении к свойству объекта ref? Почему?
+			 */
+
+			function makeUser() {
+				return {
+					name: 'John',
+					ref: this,
+				};
+			}
+
+			let user = makeUser();
+
+			alert(user.ref.name); // Каким будет результат?
+			/**
+			 * Будет ошибка.
+			 * значение this в момент вызова makeUser() внутри функции
+			 * makeUser() = undefined.
+			 */
+		</script>
+	</body>
+</html>

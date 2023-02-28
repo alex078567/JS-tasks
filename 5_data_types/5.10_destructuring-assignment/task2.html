@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Максимальная зарплата</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let salaries = {
+				John: 100,
+				Pete: 300,
+				Mary: 250,
+			};
+			alert(topSalary(salaries));
+
+			function topSalary(object) {
+				let maxSalary = 0;
+				let maxName = null;
+
+				for (const [name, salary] of Object.entries(object)) {
+					if (maxSalary < salary) {
+						maxSalary = salary;
+						maxName = name;
+					}
+				}
+
+				return maxName;
+			}
+		</script>
+	</body>
+</html>

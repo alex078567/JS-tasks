@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Вызов в контексте массива</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			/**
+			 * Каков результат? Почему?
+			 */
+			let arr = ['a', 'b'];
+
+			arr.push(function () {
+				alert(this);
+			});
+
+			arr[2]();
+			/**
+			 * Так как массив является обьектом, то this в
+			 * теле функции заменяется на arr.
+			 * Происходит вывод массива.
+			 */
+		</script>
+	</body>
+</html>

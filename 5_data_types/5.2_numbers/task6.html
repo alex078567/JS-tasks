@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Случайное целое число от min до max</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			const randFromIntervalInclusive = (min, max) => {
+				const result = min - 0.5 + Math.random() * (max - min + 1);
+				return Math.round(result);
+			};
+
+			alert(randFromIntervalInclusive(1, 5));
+			alert(randFromIntervalInclusive(1, 5));
+			alert(randFromIntervalInclusive(1, 5));
+		</script>
+	</body>
+</html>

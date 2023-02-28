@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Усечение строки</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			alert(truncate('Lorem ipsum', 5));
+			function truncate(str, maxLength) {
+				return str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
+			}
+		</script>
+	</body>
+</html>

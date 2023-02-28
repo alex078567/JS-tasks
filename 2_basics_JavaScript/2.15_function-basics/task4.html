@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Обязателен ли "else"?</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			const number = +prompt('Введите число', '');
+			const power = +prompt('Введите степень', '');
+
+			if (power < 1) {
+				alert(`Степень не поддерживается`);
+			} else {
+				alert(pow(number, power));
+			}
+
+			function pow(number, power) {
+				let result = number;
+				for (let i = 1; i < power; i++) {
+					result *= number;
+				}
+				return result;
+			}
+		</script>
+	</body>
+</html>

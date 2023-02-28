@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Создайте калькулятор</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			let calculator = {
+				read() {
+					this.firstNumber = +prompt('введите первое число', '');
+					this.secondNumber = +prompt('введите второе число', '');
+				},
+				sum() {
+					return this.firstNumber + this.secondNumber;
+				},
+				mul() {
+					return this.firstNumber * this.secondNumber;
+				},
+			};
+
+			calculator.read();
+			alert(calculator.sum());
+			alert(calculator.mul());
+		</script>
+	</body>
+</html>

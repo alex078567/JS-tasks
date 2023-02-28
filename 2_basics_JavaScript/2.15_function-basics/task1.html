@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Обязателен ли "else"?</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			const age = 12;
+			function checkAge(age) {
+				if (age > 18) {
+					return true;
+				} else {
+					// ...
+					return confirm('Родители разрешили?');
+				}
+			}
+
+			// Будет ли эта функция работать как-то иначе, если убрать else?
+			// будет работать точно так же.
+
+			function checkAge(age) {
+				if (age > 18) {
+					return true;
+				}
+				// ...
+				return confirm('Родители разрешили?');
+			}
+		</script>
+	</body>
+</html>

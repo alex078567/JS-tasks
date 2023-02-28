@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Операции с массивами</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+
+			const styles = ['Джаз', 'Блюз'];
+			alert(styles);
+			styles.push('Рок-н-ролл');
+			alert(styles);
+			insertToMiddle(styles);
+			alert(styles);
+			alert(styles.shift());
+			styles.unshift('Рэп', 'Регги');
+			alert(styles);
+
+			function insertToMiddle(arr) {
+				const middleIndex = Math.floor(arr.length / 2);
+				arr[middleIndex] = 'Классика';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Можно ли добавить свойство строке?</title>
+	</head>
+	<body>
+		<script>
+			'use strict';
+			let str = 'Привет';
+			str.test = 5; //(*)
+			alert(str.test);
+			/**
+			 * не сработает
+			 * в момент выполнения строки (*) будет создан объект-обертка
+			 * при попытке изменения этого обьекта возникнет ошибка
+			 */
+		</script>
+	</body>
+</html>
